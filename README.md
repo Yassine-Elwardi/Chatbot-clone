@@ -2,6 +2,10 @@
 
 This chatbot is created using streamlit a free open source framework to rapidly build oustanding machine learning and data science web apps.
 
+## Demo app
+
+[Demo app](https://chatbot-clone.streamlit.app)
+
 ## Prerequisite libraries
 
 ```
