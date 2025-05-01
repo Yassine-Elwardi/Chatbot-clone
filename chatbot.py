@@ -3,7 +3,21 @@ import streamlit as st
 from openai import OpenAI
 from datetime import datetime
 
-st.title("Chatbot-Clone")
+st.title("🤖 Custom AI Chatbot")
+st.markdown("""
+    **💡 About this App:**  
+    A lightweight ChatGPT-like chatbot powered by Deepseek's API. Features include:  
+    - **Real-time text responses**  
+    - **Conversation memory** (remembers chat history)  
+    - **Markdown & code formatting**  
+    - **Customizable prompts**  
+
+    **🔧 Built with:** `Streamlit`, and Python.  
+
+    **🚀 Try it out!** Type a message below and see how the AI responds.  
+""")
+
+
 
 # Available models
 models = ["deepseek/deepseek-chat-v3-0324:free","deepseek/deepseek-chat-v3-0324","deepseek/deepseek-r1-zero:free","deepseek/deepseek-r1-distill-qwen-32b:free"]
@@ -35,6 +49,13 @@ with st.sidebar:
     _left, mid, _right = st.columns(3)
     with mid:
         st.image("robot.gif",use_container_width=True,width=200)
+    
+    # ===== TAGS (Add here!) =====
+    st.markdown("""
+        **Tags:** `Chatbot`, `AI`, `Deepseek`, `LLM`, `Streamlit`, `Python`  
+    """)
+    
+ 
     
     st.subheader("Model Selection :")
     st.session_state["openai_model"] = st.selectbox(
